@@ -47,12 +47,6 @@ BookingSchema.pre('save', async function () {
   }
 });
 
-// Create index on eventId for faster queries and lookups
-BookingSchema.index({ eventId: 1 });
-
-// Compound index for finding bookings by event and email
-BookingSchema.index({ eventId: 1, email: 1 });
-
 // Prevent model overwrite during hot reloads in development
 const Booking = models.Booking || model<IBooking>('Booking', BookingSchema);
 
