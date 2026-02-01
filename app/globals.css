@@ -270,4 +270,29 @@
       }
     }
   }
+
+  #events-management {
+    .button-add {
+      @apply whitespace-nowrap bg-primary hover:bg-primary/90 cursor-pointer items-center justify-center rounded-[6px] px-4 py-2.5 text-lg sm:text-sm font-semibold text-black;
+    }
+
+    table {
+      @apply rounded-2xl overflow-hidden w-full mt-8 min-w-[1280px];
+      thead {
+        td {
+          @apply bg-dark-200 h-12 text-sm
+        }
+      }
+      td {
+        @apply bg-dark-100 px-6 py-5 h-20 font-medium border border-dark-200 box-border;
+      }
+
+      .button-edit {
+        @apply text-primary hover:text-primary/90 cursor-pointer;
+      }
+      .button-delete {
+        @apply hover:text-red-400 cursor-pointer;
+      }
+    }
+  }
 }
